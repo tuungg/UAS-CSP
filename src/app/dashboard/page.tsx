@@ -96,7 +96,11 @@ export default function DashboardPage() {
         console.error("Gagal mengupdate produk:", error)
       }
     } else {
-      const { id: _, ...newProductData } = formData
+      const newProductData = {
+        nama_produk: formData.nama_produk,
+        harga_satuan: formData.harga_satuan,
+        quantity: formData.quantity,
+      }
       const url = "http://localhost:3001/products"
       try {
         const response = await fetch(url, {
