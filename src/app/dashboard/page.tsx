@@ -96,7 +96,7 @@ export default function DashboardPage() {
         console.error("Gagal mengupdate produk:", error)
       }
     } else {
-      const { id, ...newProductData } = formData
+      const { id: _, ...newProductData } = formData
       const url = "http://localhost:3001/products"
       try {
         const response = await fetch(url, {
@@ -167,7 +167,7 @@ export default function DashboardPage() {
                     />
                   </svg>
                 </div>
-                <h1 className="text-2xl font-bold text-gray-900">CUBE</h1>
+                <h1 className="text-2xl font-bold text-gray-900">Dashboard</h1>
               </div>
               <div className="flex items-center space-x-4">
                 <div className="flex items-center space-x-2">
